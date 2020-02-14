@@ -19,6 +19,10 @@
 		88B4225B23CF8EE90008707F /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B4225A23CF8EE90008707F /* ComplicationController.swift */; };
 		88B4225D23CF8EE90008707F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88B4225C23CF8EE90008707F /* Assets.xcassets */; };
 		88B4226023CF8EE90008707F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88B4225F23CF8EE90008707F /* Preview Assets.xcassets */; };
+		88B4227123D788630008707F /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B4227023D788630008707F /* TimerView.swift */; };
+		88B4227323DA1E800008707F /* BrewTimerHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B4227223DA1E800008707F /* BrewTimerHolder.swift */; };
+		88B4227523DA1EBD0008707F /* BrewTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B4227423DA1EBD0008707F /* BrewTimerView.swift */; };
+		88B4227723DA21CF0008707F /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B4227623DA21CF0008707F /* CalculatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +84,10 @@
 		88B4225F23CF8EE90008707F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		88B4226123CF8EE90008707F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88B4226223CF8EE90008707F /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		88B4227023D788630008707F /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		88B4227223DA1E800008707F /* BrewTimerHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewTimerHolder.swift; sourceTree = "<group>"; };
+		88B4227423DA1EBD0008707F /* BrewTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewTimerView.swift; sourceTree = "<group>"; };
+		88B4227623DA21CF0008707F /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +143,10 @@
 				88B4226123CF8EE90008707F /* Info.plist */,
 				88B4226223CF8EE90008707F /* PushNotificationPayload.apns */,
 				88B4225E23CF8EE90008707F /* Preview Content */,
+				88B4227023D788630008707F /* TimerView.swift */,
+				88B4227223DA1E800008707F /* BrewTimerHolder.swift */,
+				88B4227423DA1EBD0008707F /* BrewTimerView.swift */,
+				88B4227623DA21CF0008707F /* CalculatorView.swift */,
 			);
 			path = "CoffeeCalculator WatchKit Extension";
 			sourceTree = "<group>";
@@ -275,12 +287,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88B4227123D788630008707F /* TimerView.swift in Sources */,
 				88B4225323CF8EE90008707F /* HostingController.swift in Sources */,
 				88B4225123CF8EE90008707F /* ContentView.swift in Sources */,
 				88B4225723CF8EE90008707F /* NotificationController.swift in Sources */,
 				88B4225523CF8EE90008707F /* ExtensionDelegate.swift in Sources */,
+				88B4227523DA1EBD0008707F /* BrewTimerView.swift in Sources */,
+				88B4227723DA21CF0008707F /* CalculatorView.swift in Sources */,
 				88B4225923CF8EE90008707F /* NotificationView.swift in Sources */,
 				88B4225B23CF8EE90008707F /* ComplicationController.swift in Sources */,
+				88B4227323DA1E800008707F /* BrewTimerHolder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
