@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		884630AC23F7479600C3CEC9 /* OptionsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884630AB23F7479600C3CEC9 /* OptionsButton.swift */; };
+		884630AE23F747B900C3CEC9 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884630AD23F747B900C3CEC9 /* TimerViewModel.swift */; };
+		884630B023F747F000C3CEC9 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884630AF23F747F000C3CEC9 /* CalculatorViewModel.swift */; };
+		884630B223F7481000C3CEC9 /* TimerHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884630B123F7481000C3CEC9 /* TimerHolder.swift */; };
+		884630B423F7482F00C3CEC9 /* ExtendedSessionHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884630B323F7482F00C3CEC9 /* ExtendedSessionHolder.swift */; };
+		884630B623F7487E00C3CEC9 /* WatchStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884630B523F7487E00C3CEC9 /* WatchStepper.swift */; };
 		88B4223D23CF8EE80008707F /* CoffeeCalculator WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 88B4223C23CF8EE80008707F /* CoffeeCalculator WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		88B4224323CF8EE80008707F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B4224123CF8EE80008707F /* Interface.storyboard */; };
 		88B4224523CF8EE90008707F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88B4224423CF8EE90008707F /* Assets.xcassets */; };
@@ -20,8 +26,6 @@
 		88B4225D23CF8EE90008707F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88B4225C23CF8EE90008707F /* Assets.xcassets */; };
 		88B4226023CF8EE90008707F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88B4225F23CF8EE90008707F /* Preview Assets.xcassets */; };
 		88B4227123D788630008707F /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B4227023D788630008707F /* TimerView.swift */; };
-		88B4227323DA1E800008707F /* BrewTimerHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B4227223DA1E800008707F /* BrewTimerHolder.swift */; };
-		88B4227523DA1EBD0008707F /* BrewTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B4227423DA1EBD0008707F /* BrewTimerView.swift */; };
 		88B4227723DA21CF0008707F /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B4227623DA21CF0008707F /* CalculatorView.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +72,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		884630AB23F7479600C3CEC9 /* OptionsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsButton.swift; sourceTree = "<group>"; };
+		884630AD23F747B900C3CEC9 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		884630AF23F747F000C3CEC9 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
+		884630B123F7481000C3CEC9 /* TimerHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerHolder.swift; sourceTree = "<group>"; };
+		884630B323F7482F00C3CEC9 /* ExtendedSessionHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedSessionHolder.swift; sourceTree = "<group>"; };
+		884630B523F7487E00C3CEC9 /* WatchStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchStepper.swift; sourceTree = "<group>"; };
 		88B4223823CF8EE80008707F /* CoffeeCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B4223C23CF8EE80008707F /* CoffeeCalculator WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoffeeCalculator WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B4224223CF8EE80008707F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -85,8 +95,6 @@
 		88B4226123CF8EE90008707F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88B4226223CF8EE90008707F /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		88B4227023D788630008707F /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
-		88B4227223DA1E800008707F /* BrewTimerHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewTimerHolder.swift; sourceTree = "<group>"; };
-		88B4227423DA1EBD0008707F /* BrewTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewTimerView.swift; sourceTree = "<group>"; };
 		88B4227623DA21CF0008707F /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,9 +152,13 @@
 				88B4226223CF8EE90008707F /* PushNotificationPayload.apns */,
 				88B4225E23CF8EE90008707F /* Preview Content */,
 				88B4227023D788630008707F /* TimerView.swift */,
-				88B4227223DA1E800008707F /* BrewTimerHolder.swift */,
-				88B4227423DA1EBD0008707F /* BrewTimerView.swift */,
 				88B4227623DA21CF0008707F /* CalculatorView.swift */,
+				884630AB23F7479600C3CEC9 /* OptionsButton.swift */,
+				884630AD23F747B900C3CEC9 /* TimerViewModel.swift */,
+				884630AF23F747F000C3CEC9 /* CalculatorViewModel.swift */,
+				884630B123F7481000C3CEC9 /* TimerHolder.swift */,
+				884630B323F7482F00C3CEC9 /* ExtendedSessionHolder.swift */,
+				884630B523F7487E00C3CEC9 /* WatchStepper.swift */,
 			);
 			path = "CoffeeCalculator WatchKit Extension";
 			sourceTree = "<group>";
@@ -288,15 +300,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				88B4227123D788630008707F /* TimerView.swift in Sources */,
+				884630B223F7481000C3CEC9 /* TimerHolder.swift in Sources */,
 				88B4225323CF8EE90008707F /* HostingController.swift in Sources */,
 				88B4225123CF8EE90008707F /* ContentView.swift in Sources */,
+				884630B423F7482F00C3CEC9 /* ExtendedSessionHolder.swift in Sources */,
+				884630B023F747F000C3CEC9 /* CalculatorViewModel.swift in Sources */,
 				88B4225723CF8EE90008707F /* NotificationController.swift in Sources */,
+				884630B623F7487E00C3CEC9 /* WatchStepper.swift in Sources */,
+				884630AE23F747B900C3CEC9 /* TimerViewModel.swift in Sources */,
 				88B4225523CF8EE90008707F /* ExtensionDelegate.swift in Sources */,
-				88B4227523DA1EBD0008707F /* BrewTimerView.swift in Sources */,
 				88B4227723DA21CF0008707F /* CalculatorView.swift in Sources */,
+				884630AC23F7479600C3CEC9 /* OptionsButton.swift in Sources */,
 				88B4225923CF8EE90008707F /* NotificationView.swift in Sources */,
 				88B4225B23CF8EE90008707F /* ComplicationController.swift in Sources */,
-				88B4227323DA1E800008707F /* BrewTimerHolder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

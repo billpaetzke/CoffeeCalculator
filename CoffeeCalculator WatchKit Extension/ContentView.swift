@@ -7,18 +7,26 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ContentView: View {
     
+    var timerHolder : TimerHolder
+    var extendedSessionHolder : ExtendedSessionHolder
+    
     var body: some View {
+       
+        CalculatorView(timerHolder: timerHolder,
+                       extendedSessionHolder: extendedSessionHolder,
+                       calculatorViewModel: CalculatorViewModel())
         
-        CalculatorView()
-
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environmentObject(BrewTimerHolder())
+        ContentView(timerHolder: TimerHolder(),
+        extendedSessionHolder: ExtendedSessionHolder())
     }
 }
+

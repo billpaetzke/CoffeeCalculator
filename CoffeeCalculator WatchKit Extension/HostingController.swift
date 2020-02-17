@@ -12,6 +12,7 @@ import SwiftUI
 import AVFoundation
 
 class HostingController: WKHostingController<AnyView> {
+
     override var body: AnyView {
         
         let audioSession = AVAudioSession.sharedInstance()
@@ -21,9 +22,31 @@ class HostingController: WKHostingController<AnyView> {
           print("audioSession properties weren't set because of an error.")
         }
         
-        return AnyView(
-            ContentView()
-            .environmentObject(BrewTimerHolder())
-        )
+        return AnyView(ContentView(timerHolder: TimerHolder(),
+                           extendedSessionHolder: ExtendedSessionHolder()))
     }
 }
+
+/*
+ import WatchKit
+ import Foundation
+ import SwiftUI
+ import AVFoundation
+
+ class HostingController: WKHostingController<AnyView> {
+     override var body: AnyView {
+         
+         let audioSession = AVAudioSession.sharedInstance()
+         do { // setCategory must be set to playback for background audio to be allowed
+             try audioSession.setCategory(AVAudioSession.Category.playback, options: .mixWithOthers)
+         } catch {
+           print("audioSession properties weren't set because of an error.")
+         }
+         
+         return AnyView(
+             ContentView()
+             .environmentObject(BrewTimerHolder())
+         )
+     }
+ }
+ */

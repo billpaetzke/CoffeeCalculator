@@ -7,114 +7,158 @@
 //
 
 import SwiftUI
-import AVFoundation
-import Combine
 
 struct TimerView: View {
-    @State var brewWeight = 0
-    @State var iteration = 0
-    let audioSession = AVAudioSession.sharedInstance()
-    let synth = AVSpeechSynthesizer()
     
-    let timer = Timer.publish(every: 3, on: .main, in: .common)
-    
-    @State var cancellable: Cancellable?
+    @ObservedObject var timerHolder : TimerHolder
+    var extendedSessionHolder : ExtendedSessionHolder
+    @ObservedObject var timerViewModel : TimerViewModel
+    //@State private var buttonText = "Start"
+    //@State private var title = "title"
     
     var body: some View {
-        
         VStack {
-            Text("\(brewWeight)")
-                .font(.title)
-                .onReceive(timer) {_ in
-                    if (self.iteration == 0)
-                    {
-                        let utter = AVSpeechUtterance(string: "0 grams @ 5 grams / second")
-                        utter.voice = AVSpeechSynthesisVoice(language: "en-US")
-                        utter.volume = Float(1.0)
-                        utter.rate = utter.rate * 1
-                        self.synth.speak(utter)
+            
+            //if (timerViewModel.getStageNum(durationSec: timerHolder.count) == 1)
+            if !timerHolder.isRunning && timerHolder.startDate == nil
+            {
+                HStack {
+                    VStack(alignment: .leading) {
+                        
+                        
+                        ForEach(1...3, id: \.self) { stageNum in
+                            Text(String(Int(self.timerViewModel.getStageMassMin(stageNum: stageNum).rounded()))
+                                + " -> " +
+                            String(Int(self.timerViewModel.getStageMassMax(stageNum: stageNum).rounded())))
+                        }
+                        
+                        Text("grams")
+                        
                     }
-                    else if (self.iteration <= 2 || self.iteration >= 14) {
-                        self.brewWeight = self.brewWeight + 15
+                    VStack(alignment: .trailing) {
                         
-                        let utter = AVSpeechUtterance(string:
-                            (self.brewWeight / 100 == 0 ? "" : String(self.brewWeight / 100))
-                                + " " +
-                                (self.brewWeight % 100 == 0 ? String(self.brewWeight) : String(self.brewWeight % 100)))
-                        utter.voice = AVSpeechSynthesisVoice(language: "en-US")
-                        utter.volume = Float(1.0)
-                        utter.rate = utter.rate * 1
-                        self.synth.speak(utter)
                         
-                        if (self.brewWeight >= 390) {
-                            
-                            self.cancellable?.cancel()
-                            
-                            let utter = AVSpeechUtterance(string: "@ 0 grams / second. 390 @ 0 grams / second.")
-                            utter.voice = AVSpeechSynthesisVoice(language: "en-US")
-                            utter.volume = Float(1.0)
-                            utter.rate = utter.rate * 1
-                            self.synth.speak(utter)
+                        ForEach(1...3, id: \.self) { stageNum in
+                            Text(
+                                self.format(
+                                    second:TimeInterval(
+                                        self.timerViewModel.getStageDurationSec(
+                                            stageNum: stageNum
+                                        )
+                                    )
+                                )
+                                ?? "z"
+                            )
+                        }
+                        
+                        Text("\(format(second:TimeInterval(timerViewModel.totalDurationSec)) ?? "w")")
+                        .fontWeight(.bold)
+                    }
+                }
+            }
+            else {
+                VStack {
+                      
+                    Text(
+                        String(Int(timerViewModel.getStageMassMin(stageNum: timerViewModel.getStageNum(durationSec: timerHolder.count)).rounded()))
+                        + " -> " +
+                        String(Int(timerViewModel.getStageMassMax(stageNum: timerViewModel.getStageNum(durationSec: timerHolder.count)).rounded()))
+                    )
+                    
+                    Text(String(Int(timerViewModel.getExpectedBrewMass(durationSec: timerHolder.count).rounded())))
+                        .font(.title)
+                    
+                    Text("grams").font(.footnote)
+                }
+            }
+            
+            
+            
+            HStack {
+                OptionsButton(boundValue: self.$timerViewModel.pourRate, from: 3, by: 1, over: 4)
+                OptionsButton(boundValue: self.$timerViewModel.bloomDurationSec, from: 30, by: 5, over: 4)
+                    .font(.footnote)
+                
+                Button(action: {
+                    if self.timerHolder.isRunning {
+                        self.timerHolder.stop()
+                        self.extendedSessionHolder.stop()
+                    }
+                    else {
+                        if (self.timerHolder.startDate == nil) {
+                            self.extendedSessionHolder.start()
+                            self.extendedSessionHolder.watchSpecificSubscribeCount(timerCountPublisher: self.timerHolder.$count, model: self.timerViewModel)
+                            self.extendedSessionHolder.generalSubscribeCount(timerCountPublisher: self.timerHolder.$count, model: self.timerViewModel, timerHolder: self.timerHolder)
+                            self.timerHolder.start()
+                        }
+                        else {
+                            self.timerHolder.reset()
                         }
                     }
-                    
-                    if (self.iteration == 3)
-                    {
-                        self.brewWeight = self.brewWeight + 15
-                        let utter = AVSpeechUtterance(string: "45 grams @ 0 grams / second")
-                        utter.voice = AVSpeechSynthesisVoice(language: "en-US")
-                        utter.volume = Float(1.0)
-                        utter.rate = utter.rate * 1
-                        self.synth.speak(utter)
-                    }
-                    
-                    if (self.iteration == 12)
-                    {
-                        let utter = AVSpeechUtterance(string: "45 grams @ 0 grams / second")
-                        utter.voice = AVSpeechSynthesisVoice(language: "en-US")
-                        utter.volume = Float(1.0)
-                        utter.rate = utter.rate * 1
-                        self.synth.speak(utter)
-                    }
-                    
-                    if (self.iteration == 13)
-                    {
-                        let utter = AVSpeechUtterance(string: "45 grams @ 5 grams / second")
-                        utter.voice = AVSpeechSynthesisVoice(language: "en-US")
-                        utter.volume = Float(1.0)
-                        utter.rate = utter.rate * 1
-                        self.synth.speak(utter)
-                    }
-                    
-                    self.iteration = self.iteration + 1
-                    
-            }
-            
-            
-            Button(action: {
-                                
-                self.cancellable = self.timer.connect()
-            }) {
-                Text("Start")
-            }
-            
-            Button(action: {
-                self.cancellable?.cancel()
+                }) {
+                    Image(systemName: timerHolder.isRunning ? "stop.fill" : (timerHolder.startDate == nil ? "play.fill" : "backward.end.fill"))
+                }
                 
-                self.brewWeight = 0
-                self.iteration = 0
-            }) {
-                Text("Stop")
+                OptionsButton(boundValue: self.$timerViewModel.spokenIntervalSec, from: 2, by: 1, over: 4)
+                
             }
-            
-            
+        }
+        .navigationBarTitle(getNavBarTitle(startDate: timerHolder.startDate, durationSec: timerHolder.count))
+        /*.onReceive(timerHolder.$count, perform: { count in
+            self.title = self.getNavBarTitle(durationSec: count)
+        })*/
+    }
+    
+    func format(second: TimeInterval) -> String? {
+        let formatter = DateComponentsFormatter()
+        formatter.unitsStyle = .positional
+        formatter.allowedUnits = [.minute, .second]
+        formatter.zeroFormattingBehavior = Int(second) % 60 == 0 ? .dropLeading : .dropTrailing
+        return formatter.string(from: second)
+    }
+    
+    func getStageTimeRemainingSec(durationSec: Int) -> Int {
+        if (durationSec < 0) {
+            return abs(durationSec)
         }
         
+        if (durationSec < timerViewModel.firstPourDurationSec) {
+            return durationSec - timerViewModel.firstPourDurationSec
+        }
+        
+        if (durationSec < timerViewModel.firstPourDurationSec + Int(timerViewModel.bloomDurationSec.rounded())) {
+            return durationSec - timerViewModel.firstPourDurationSec - Int(timerViewModel.bloomDurationSec.rounded())
+        }
+            
+        return timerViewModel.firstPourDurationSec + Int(timerViewModel.bloomDurationSec.rounded()) + timerViewModel.finalPourDurationSec - durationSec
+    }
+    
+    func getStageTimeRemaining(durationSec: Int) -> String {
+        
+        return format(second: TimeInterval(getStageTimeRemainingSec(durationSec: durationSec))) ?? "y"
+    }
+    
+    func getNavBarTitle(startDate : Date?, durationSec: Int) -> String {
+        
+        if (startDate == nil)
+        {
+            return "0/3) " + (format(second: 3) ?? "q")
+        }
+        
+        if (self.timerViewModel.getStageNum(durationSec: durationSec) == 4)
+        {
+            let di = DateInterval(start: startDate!, end: Date())
+            return format(second: di.duration) ?? "x"
+        }
+        
+        return String(self.timerViewModel.getStageNum(durationSec: durationSec)) + "/3) " + getStageTimeRemaining(durationSec: durationSec)
     }
 }
 
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerView()
+        TimerView(timerHolder: TimerHolder(),
+                  extendedSessionHolder: ExtendedSessionHolder(),
+                  timerViewModel: TimerViewModel(massModel: CalculatorViewModel()))
     }
 }
