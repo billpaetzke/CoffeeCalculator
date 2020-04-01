@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		884630AC23F7479600C3CEC9 /* OptionsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884630AB23F7479600C3CEC9 /* OptionsButton.swift */; };
-		884630AE23F747B900C3CEC9 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884630AD23F747B900C3CEC9 /* TimerViewModel.swift */; };
+		8836272A240F071100E71759 /* CoffeeCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88362729240F071100E71759 /* CoffeeCalculatorTests.swift */; };
+		88362738240F09A900E71759 /* CoffeeCalculatorKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 88362736240F09A900E71759 /* CoffeeCalculatorKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8836273D240F0BDB00E71759 /* BrewRecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836273C240F0BDB00E71759 /* BrewRecipeModel.swift */; };
 		884630B023F747F000C3CEC9 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884630AF23F747F000C3CEC9 /* CalculatorViewModel.swift */; };
 		884630B223F7481000C3CEC9 /* TimerHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884630B123F7481000C3CEC9 /* TimerHolder.swift */; };
 		884630B423F7482F00C3CEC9 /* ExtendedSessionHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884630B323F7482F00C3CEC9 /* ExtendedSessionHolder.swift */; };
-		884630B623F7487E00C3CEC9 /* WatchStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884630B523F7487E00C3CEC9 /* WatchStepper.swift */; };
+		884631072404773400C3CEC9 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 884631062404773400C3CEC9 /* HealthKit.framework */; };
+		884631092404793C00C3CEC9 /* CaffeineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884631082404793C00C3CEC9 /* CaffeineView.swift */; };
+		884631502409D28200C3CEC9 /* TimerPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8846314F2409D28200C3CEC9 /* TimerPlanView.swift */; };
+		884631542409D3BC00C3CEC9 /* BrewPlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884631532409D3BC00C3CEC9 /* BrewPlanModel.swift */; };
 		88B4223D23CF8EE80008707F /* CoffeeCalculator WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 88B4223C23CF8EE80008707F /* CoffeeCalculator WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		88B4224323CF8EE80008707F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B4224123CF8EE80008707F /* Interface.storyboard */; };
 		88B4224523CF8EE90008707F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88B4224423CF8EE90008707F /* Assets.xcassets */; };
@@ -72,12 +76,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		884630AB23F7479600C3CEC9 /* OptionsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsButton.swift; sourceTree = "<group>"; };
-		884630AD23F747B900C3CEC9 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		88362727240F071100E71759 /* CoffeeCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		88362729240F071100E71759 /* CoffeeCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCalculatorTests.swift; sourceTree = "<group>"; };
+		8836272B240F071100E71759 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88362734240F09A900E71759 /* CoffeeCalculatorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoffeeCalculatorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88362736240F09A900E71759 /* CoffeeCalculatorKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoffeeCalculatorKit.h; sourceTree = "<group>"; };
+		88362737240F09A900E71759 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8836273C240F0BDB00E71759 /* BrewRecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewRecipeModel.swift; sourceTree = "<group>"; };
 		884630AF23F747F000C3CEC9 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
 		884630B123F7481000C3CEC9 /* TimerHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerHolder.swift; sourceTree = "<group>"; };
 		884630B323F7482F00C3CEC9 /* ExtendedSessionHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedSessionHolder.swift; sourceTree = "<group>"; };
-		884630B523F7487E00C3CEC9 /* WatchStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchStepper.swift; sourceTree = "<group>"; };
+		884631042404773400C3CEC9 /* CoffeeCalculator WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CoffeeCalculator WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		884631062404773400C3CEC9 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS6.1.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		884631082404793C00C3CEC9 /* CaffeineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaffeineView.swift; sourceTree = "<group>"; };
+		8846314F2409D28200C3CEC9 /* TimerPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPlanView.swift; sourceTree = "<group>"; };
+		884631532409D3BC00C3CEC9 /* BrewPlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewPlanModel.swift; sourceTree = "<group>"; };
 		88B4223823CF8EE80008707F /* CoffeeCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B4223C23CF8EE80008707F /* CoffeeCalculator WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoffeeCalculator WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B4224223CF8EE80008707F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -99,22 +112,67 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		88B4224823CF8EE90008707F /* Frameworks */ = {
+		88362724240F071100E71759 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		88362731240F09A900E71759 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88B4224823CF8EE90008707F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				884631072404773400C3CEC9 /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		88362728240F071100E71759 /* CoffeeCalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				88362729240F071100E71759 /* CoffeeCalculatorTests.swift */,
+				8836272B240F071100E71759 /* Info.plist */,
+			);
+			path = CoffeeCalculatorTests;
+			sourceTree = "<group>";
+		};
+		88362735240F09A900E71759 /* CoffeeCalculatorKit */ = {
+			isa = PBXGroup;
+			children = (
+				88362736240F09A900E71759 /* CoffeeCalculatorKit.h */,
+				88362737240F09A900E71759 /* Info.plist */,
+				8836273C240F0BDB00E71759 /* BrewRecipeModel.swift */,
+			);
+			path = CoffeeCalculatorKit;
+			sourceTree = "<group>";
+		};
+		884631052404773400C3CEC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				884631062404773400C3CEC9 /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		88B4223123CF8EE70008707F = {
 			isa = PBXGroup;
 			children = (
 				88B4224023CF8EE80008707F /* CoffeeCalculator WatchKit App */,
 				88B4224F23CF8EE90008707F /* CoffeeCalculator WatchKit Extension */,
+				88362728240F071100E71759 /* CoffeeCalculatorTests */,
+				88362735240F09A900E71759 /* CoffeeCalculatorKit */,
 				88B4223923CF8EE80008707F /* Products */,
+				884631052404773400C3CEC9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +182,8 @@
 				88B4223823CF8EE80008707F /* CoffeeCalculator.app */,
 				88B4223C23CF8EE80008707F /* CoffeeCalculator WatchKit App.app */,
 				88B4224B23CF8EE90008707F /* CoffeeCalculator WatchKit Extension.appex */,
+				88362727240F071100E71759 /* CoffeeCalculatorTests.xctest */,
+				88362734240F09A900E71759 /* CoffeeCalculatorKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,6 +201,7 @@
 		88B4224F23CF8EE90008707F /* CoffeeCalculator WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				884631042404773400C3CEC9 /* CoffeeCalculator WatchKit Extension.entitlements */,
 				88B4225023CF8EE90008707F /* ContentView.swift */,
 				88B4225223CF8EE90008707F /* HostingController.swift */,
 				88B4225423CF8EE90008707F /* ExtensionDelegate.swift */,
@@ -151,14 +212,14 @@
 				88B4226123CF8EE90008707F /* Info.plist */,
 				88B4226223CF8EE90008707F /* PushNotificationPayload.apns */,
 				88B4225E23CF8EE90008707F /* Preview Content */,
-				88B4227023D788630008707F /* TimerView.swift */,
 				88B4227623DA21CF0008707F /* CalculatorView.swift */,
-				884630AB23F7479600C3CEC9 /* OptionsButton.swift */,
-				884630AD23F747B900C3CEC9 /* TimerViewModel.swift */,
 				884630AF23F747F000C3CEC9 /* CalculatorViewModel.swift */,
+				884631532409D3BC00C3CEC9 /* BrewPlanModel.swift */,
+				8846314F2409D28200C3CEC9 /* TimerPlanView.swift */,
+				88B4227023D788630008707F /* TimerView.swift */,
 				884630B123F7481000C3CEC9 /* TimerHolder.swift */,
 				884630B323F7482F00C3CEC9 /* ExtendedSessionHolder.swift */,
-				884630B523F7487E00C3CEC9 /* WatchStepper.swift */,
+				884631082404793C00C3CEC9 /* CaffeineView.swift */,
 			);
 			path = "CoffeeCalculator WatchKit Extension";
 			sourceTree = "<group>";
@@ -173,7 +234,53 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		8836272F240F09A900E71759 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88362738240F09A900E71759 /* CoffeeCalculatorKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		88362726240F071100E71759 /* CoffeeCalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8836272E240F071100E71759 /* Build configuration list for PBXNativeTarget "CoffeeCalculatorTests" */;
+			buildPhases = (
+				88362723240F071100E71759 /* Sources */,
+				88362724240F071100E71759 /* Frameworks */,
+				88362725240F071100E71759 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoffeeCalculatorTests;
+			productName = CoffeeCalculatorTests;
+			productReference = 88362727240F071100E71759 /* CoffeeCalculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		88362733240F09A900E71759 /* CoffeeCalculatorKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88362739240F09A900E71759 /* Build configuration list for PBXNativeTarget "CoffeeCalculatorKit" */;
+			buildPhases = (
+				8836272F240F09A900E71759 /* Headers */,
+				88362730240F09A900E71759 /* Sources */,
+				88362731240F09A900E71759 /* Frameworks */,
+				88362732240F09A900E71759 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoffeeCalculatorKit;
+			productName = CoffeeCalculatorKit;
+			productReference = 88362734240F09A900E71759 /* CoffeeCalculatorKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		88B4223723CF8EE80008707F /* CoffeeCalculator */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88B4226D23CF8EE90008707F /* Build configuration list for PBXNativeTarget "CoffeeCalculator" */;
@@ -235,6 +342,13 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Bill Paetzke";
 				TargetAttributes = {
+					88362726240F071100E71759 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					88362733240F09A900E71759 = {
+						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
+					};
 					88B4223723CF8EE80008707F = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -262,11 +376,27 @@
 				88B4223723CF8EE80008707F /* CoffeeCalculator */,
 				88B4223B23CF8EE80008707F /* CoffeeCalculator WatchKit App */,
 				88B4224A23CF8EE90008707F /* CoffeeCalculator WatchKit Extension */,
+				88362726240F071100E71759 /* CoffeeCalculatorTests */,
+				88362733240F09A900E71759 /* CoffeeCalculatorKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		88362725240F071100E71759 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88362732240F09A900E71759 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		88B4223623CF8EE80008707F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -295,6 +425,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		88362723240F071100E71759 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8836272A240F071100E71759 /* CoffeeCalculatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88362730240F09A900E71759 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8836273D240F0BDB00E71759 /* BrewRecipeModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		88B4224723CF8EE90008707F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -306,12 +452,12 @@
 				884630B423F7482F00C3CEC9 /* ExtendedSessionHolder.swift in Sources */,
 				884630B023F747F000C3CEC9 /* CalculatorViewModel.swift in Sources */,
 				88B4225723CF8EE90008707F /* NotificationController.swift in Sources */,
-				884630B623F7487E00C3CEC9 /* WatchStepper.swift in Sources */,
-				884630AE23F747B900C3CEC9 /* TimerViewModel.swift in Sources */,
 				88B4225523CF8EE90008707F /* ExtensionDelegate.swift in Sources */,
+				884631092404793C00C3CEC9 /* CaffeineView.swift in Sources */,
 				88B4227723DA21CF0008707F /* CalculatorView.swift in Sources */,
-				884630AC23F7479600C3CEC9 /* OptionsButton.swift in Sources */,
 				88B4225923CF8EE90008707F /* NotificationView.swift in Sources */,
+				884631542409D3BC00C3CEC9 /* BrewPlanModel.swift in Sources */,
+				884631502409D28200C3CEC9 /* TimerPlanView.swift in Sources */,
 				88B4225B23CF8EE90008707F /* ComplicationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,6 +489,103 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8836272C240F071100E71759 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CoffeeCalculatorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = BillPaetzke.CoffeeCalculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8836272D240F071100E71759 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CoffeeCalculatorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = BillPaetzke.CoffeeCalculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8836273A240F09A900E71759 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CoffeeCalculatorKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = BillPaetzke.CoffeeCalculatorKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Debug;
+		};
+		8836273B240F09A900E71759 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CoffeeCalculatorKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = BillPaetzke.CoffeeCalculatorKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Release;
+		};
 		88B4226323CF8EE90008707F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -459,6 +702,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "CoffeeCalculator WatchKit Extension/CoffeeCalculator WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CoffeeCalculator WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = LSVA86Q34D;
@@ -475,7 +719,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
 			};
 			name = Debug;
 		};
@@ -483,6 +727,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "CoffeeCalculator WatchKit Extension/CoffeeCalculator WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CoffeeCalculator WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = LSVA86Q34D;
@@ -499,7 +744,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
 			};
 			name = Release;
 		};
@@ -516,9 +761,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 5.2;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
 			};
 			name = Debug;
 		};
@@ -535,9 +780,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 5.2;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
 			};
 			name = Release;
 		};
@@ -550,7 +795,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = BillPaetzke.CoffeeCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 5.2;
 			};
 			name = Debug;
 		};
@@ -563,13 +808,31 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = BillPaetzke.CoffeeCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 5.2;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8836272E240F071100E71759 /* Build configuration list for PBXNativeTarget "CoffeeCalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8836272C240F071100E71759 /* Debug */,
+				8836272D240F071100E71759 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88362739240F09A900E71759 /* Build configuration list for PBXNativeTarget "CoffeeCalculatorKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8836273A240F09A900E71759 /* Debug */,
+				8836273B240F09A900E71759 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		88B4223523CF8EE70008707F /* Build configuration list for PBXProject "CoffeeCalculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

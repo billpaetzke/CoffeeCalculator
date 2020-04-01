@@ -12,7 +12,7 @@ import SwiftUI
 import AVFoundation
 
 class HostingController: WKHostingController<AnyView> {
-
+    
     override var body: AnyView {
         
         let audioSession = AVAudioSession.sharedInstance()
@@ -22,7 +22,8 @@ class HostingController: WKHostingController<AnyView> {
           print("audioSession properties weren't set because of an error.")
         }
         
-        return AnyView(ContentView(timerHolder: TimerHolder(),
+        
+        return AnyView(ContentView(timerHolder: TimerHolder.sharedInstance,
                            extendedSessionHolder: ExtendedSessionHolder()))
     }
 }

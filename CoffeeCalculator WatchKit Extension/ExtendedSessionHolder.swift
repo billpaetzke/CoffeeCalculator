@@ -11,112 +11,17 @@ import WatchKit
 import Combine
 import AVFoundation
 
-class ExtendedSessionHolder : NSObject, WKExtendedRuntimeSessionDelegate {
+class ExtendedSessionHolder : NSObject, WKExtendedRuntimeSessionDelegate, AVSpeechSynthesizerDelegate {
     
     var watchSpecificSubToCount : AnyCancellable?
     var generalSubToCount : AnyCancellable?
     let synth = AVSpeechSynthesizer()
+    //var extendedSessionBackgroundQueue: DispatchQueue = DispatchQueue(label: "extendedSessionBackgroundQueue")
     
-    func watchSpecificSubscribeCount(timerCountPublisher : Published<Int>.Publisher, model : TimerViewModel) {
-        self.watchSpecificSubToCount = timerCountPublisher
-            .receive(on: RunLoop.current)
-            .dropFirst() // the @Published seems to be a current value publisher, and we only want new values
-            .sink(receiveValue: {
-                count in
-                
-                if (count == 0 || count == model.firstPourDurationSec + Int(model.bloomDurationSec)) {
-                    WKInterfaceDevice.current().play(.start)
-                    
-                    /* something to do on start?
-                    let clkServer = CLKComplicationServer.sharedInstance()
-                    let complications = clkServer.activeComplications
-                    if (complications != nil && complications!.count > 0)
-                    {
-                        clkServer.reloadTimeline(for: (complications?[0])!)
-                    }*/
-                }
-                else if (count >= model.firstPourDurationSec - 3 && count < model.firstPourDurationSec) {
-                    WKInterfaceDevice.current().play(.directionDown)
-                }
-                else if (count < 0
-                    || (count >= model.firstPourDurationSec + Int(model.bloomDurationSec) - 3 && count < model.firstPourDurationSec + Int(model.bloomDurationSec))
-                    )
-                {
-                    WKInterfaceDevice.current().play(.directionUp)
-                }
-                else if (count == model.firstPourDurationSec)
-                {
-                    WKInterfaceDevice.current().play(.stop)
-                }
-                else if (count >= model.totalDurationSec - 3 && count < model.totalDurationSec)
-                {
-                    WKInterfaceDevice.current().play(.directionDown)
-                }
-                else if (count == model.totalDurationSec) {
-                    WKInterfaceDevice.current().play(.success)
-                }
-                else if (count >= model.totalDurationSec + 60) {
-                    WKInterfaceDevice.current().play(.start)
-                }
-                else if (count >= model.totalDurationSec + 180) // not sure if this code block runs or acts as intended; need to test
-                {
-                    self.stop()
-                }
-            })
+    override init() {
+        super.init()
+        synth.delegate = self
     }
-    
-    func generalSubscribeCount(timerCountPublisher : Published<Int>.Publisher, model : TimerViewModel, timerHolder: TimerHolder) {
-        self.generalSubToCount = timerCountPublisher
-            .receive(on: RunLoop.current)
-            .dropFirst() // the @Published seems to be a current value publisher, and we only want new values
-            .sink(receiveValue: {
-                count in
-                
-                if (count == -3) {
-                    let utter = AVSpeechUtterance(string: "OK")
-                    utter.volume = Float(0.0)
-                    self.synth.speak(utter)
-                }
-                else {
-                
-                    let stageNum = model.getStageNum(durationSec: count)
-                    
-                    if (count == model.firstPourDurationSec
-                        || count == model.totalDurationSec
-                        || count == model.firstPourDurationSec + Int(model.bloomDurationSec.rounded())
-                        || (count % (Int(model.spokenIntervalSec.rounded())) == 0 && (stageNum == 1 || stageNum == 3))
-                        )
-                    {
-                        let expectedBrewMass = model.getExpectedBrewMass(durationSec: count)
-                        let utter = AVSpeechUtterance(string: self.getSpeechText(mass: Int(expectedBrewMass.rounded())))
-                        utter.volume = Float(1.0)
-                        self.synth.speak(utter)
-                    }
-                }
-                /*
-                if (count >= model.totalDurationSec)
-                {
-                    timerHolder.stop()
-                }*/
-            })
-    }
-    
-    func getSpeechText(mass:Int) -> String
-    {
-        if (mass % 100 < 10) // i.e. 100-109, 200-209, etc.
-        {
-            return String(mass) // "one hundred nine"
-        }
-        
-        if (mass / 100 > 0) // i.e. 110-199, 210-299, etc.
-        {
-            return String(mass / 100) + " " + String(mass % 100) // "one twenty nine"
-        }
-        
-        return String(mass % 100) // 10-99 // "twenty nine"
-        
-    }
-    
     
     private var runtimeSession = WKExtendedRuntimeSession()
     
@@ -146,5 +51,132 @@ class ExtendedSessionHolder : NSObject, WKExtendedRuntimeSessionDelegate {
     func extendedRuntimeSession(_ extendedRuntimeSession: WKExtendedRuntimeSession, didInvalidateWith reason: WKExtendedRuntimeSessionInvalidationReason, error: Error?) {
         // Track when your session ends.
         // Also handle errors here.
+    }
+    
+    func watchSpecificSubscribeCount(timerCountPublisher : Published<Int>.Publisher, model : TimerInstructions) {
+        self.watchSpecificSubToCount = timerCountPublisher
+            .receive(on: RunLoop.current)
+            .dropFirst() // the @Published seems to be a current value publisher, and we only want new values
+            .sink(receiveValue: {
+                count in
+                
+                //let nextPourTime = model.getNextPourStartTime(from: TimeInterval(count))
+                //let nextRestTime = model.getNextRestStartTime(from: TimeInterval(count))
+                let instructionNow = model.get(at: count)
+                let instructionNext = model.get(at: count + 3) /* instruction 3 sec in future */
+                let isEndTime = model.isEnd(at: count)
+                
+                if count == 0 || instructionNow?.isPouringStart(at: count) ?? false {
+                    WKInterfaceDevice.current().play(.start)
+                    
+                }
+                else if instructionNext != nil && instructionNext != instructionNow {
+                    
+                    let direction : WKHapticType = instructionNext!.isPouring ? .directionUp : .directionDown
+                    WKInterfaceDevice.current().play(direction)
+                    
+                }
+                else if instructionNow?.isRestingStart(at: count) ?? false
+                {
+                    WKInterfaceDevice.current().play(.stop)
+                }
+                else if isEndTime {
+                    WKInterfaceDevice.current().play(.success)
+                    
+                }
+                else if model.isEnd(at: count - 3) {
+                    /* 3 seconds after end */
+                    self.stop()
+                }
+            })
+    }
+    
+    func generalSubscribeCount(timerCountPublisher : Published<Int>.Publisher, model : TimerInstructions, timerHolder: TimerHolder, spokenIntervalSec : TimeInterval) {
+        self.generalSubToCount = timerCountPublisher
+            .receive(on: RunLoop.current)
+            .dropFirst() // the @Published seems to be a current value publisher, and we only want new values
+            .sink(receiveValue: {
+                count in
+                
+                self.subTimes.append(Date())
+               
+                let instructionNow = model.get(at: count)
+                let instructionNext = model.get(at: count + 1)
+                let isEndTime = model.isEnd(at: count)
+                let isEndTimeNext = model.isEnd(at: count + 1)
+                let isPouringStartNext : Bool = instructionNext?.isPouringStart(at: count + 1) ?? false
+                let isPouring : Bool = instructionNow?.isPouring ?? false
+                
+                if count == -3 {
+                    let utter = AVSpeechUtterance(string: "OK")
+                    utter.rate = AVSpeechUtteranceDefaultSpeechRate * 1.25
+                    utter.volume = Float(0.0)
+                    self.synth.speak(utter)
+                }
+                else if isPouringStartNext || isEndTimeNext {
+                    let utter = AVSpeechUtterance(string: "OK")
+                    utter.rate = AVSpeechUtteranceDefaultSpeechRate * 1.25
+                    utter.volume = Float(1.0)
+                    self.synth.speak(utter)
+                }
+                else if isEndTime {
+                    let utter = AVSpeechUtterance(string: ".")
+                    utter.rate = AVSpeechUtteranceDefaultSpeechRate * 1.25
+                    utter.volume = Float(1.0)
+                    self.synth.speak(utter)
+                }
+                else if isPouring {
+                     
+                    let expectedBrewMass = instructionNow!.getMass(at: count)
+                    var speechText = self.getSpeechText(mass: expectedBrewMass)
+                    
+                    let isRestingStartUpNext = instructionNext?.isRestingStart(at: count + 1) ?? false
+                    if isRestingStartUpNext {
+                        let expectedBrewMassUpNext = instructionNext!.getMass(at: count + 1)
+                        speechText += ", OK \(self.getSpeechText(mass: expectedBrewMassUpNext))."
+                    }
+                    
+                    let utter = AVSpeechUtterance(string: speechText)
+                    utter.rate = AVSpeechUtteranceDefaultSpeechRate * 1.25
+                    utter.pitchMultiplier = 1.0
+                    utter.volume = Float(1.0)
+                    //utter.voice = AVSpeechSynthesisVoice(language: "ja-jp")//en-us")//es-mx")
+                    self.synth.speak(utter)
+                    
+                }
+                /*
+                if (count >= model.totalDurationSec)
+                {
+                    timerHolder.stop()
+                }*/
+            })
+    }
+    
+    func getSpeechText(mass:Int) -> String
+    {
+        if (mass % 100 < 10) // i.e. 100-109, 200-209, etc.
+        {
+            return String(mass) // "one hundred nine"
+        }
+        
+        if (mass / 100 > 0) // i.e. 110-199, 210-299, etc.
+        {
+            return String(mass / 100) + " " + String(mass % 100) // "one twenty nine"
+        }
+        
+        return String(mass % 100) // 10-99 // "twenty nine"
+        
+    }
+    
+    private var subTimes : [Date] = []
+    private var speechStartTimes : [Date] = []
+    private var speechFinishTimes : [Date] = []
+    
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance) {
+        speechStartTimes.append(Date())
+    }
+
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
+        speechFinishTimes.append(Date())
     }
 }

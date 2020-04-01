@@ -13,6 +13,9 @@ class TimerHolder : ObservableObject {
     @Published var count = -3
     @Published var isRunning = false
     @Published var startDate : Date? = nil
+    var stopDate : Date?
+    
+    static let sharedInstance = TimerHolder()
     
     func start() {
         timer?.invalidate()
@@ -26,6 +29,11 @@ class TimerHolder : ObservableObject {
         timer = Timer(timeInterval: 1, repeats: true) {
             _ in
             self.count += 1
+            
+            if (self.count == 1800) {
+                self.stop()
+                self.reset()
+            }
         }
         RunLoop.current.add(timer, forMode: .common)
         isRunning = true
@@ -35,9 +43,11 @@ class TimerHolder : ObservableObject {
 
         timer?.invalidate()
         isRunning = false
+        stopDate = Date()
     }
     
     func reset() {
         startDate = nil
+        stopDate = nil
     }
 }
