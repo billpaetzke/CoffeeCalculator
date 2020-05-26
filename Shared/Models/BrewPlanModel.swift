@@ -8,12 +8,28 @@
 
 import Foundation
 
+enum BrewMetric {
+    case none
+    case coffee
+    case water
+    case ratio
+}
+
 final class BrewPlanModel : ObservableObject {
+    
+    @Published var lockState : BrewMetric = .ratio
     
     @Published var coffeeMass : Double = 20.0 {
         didSet {
             if (waterOverCoffeeInt != ratioInt) {
-                waterMass = coffeeMass * ratio
+                
+                switch lockState {
+                case .ratio:
+                    waterMass = coffeeMass * ratio
+                default:
+                    ratio = waterMass / coffeeMass
+                }
+                
             }
         }
     }
@@ -21,7 +37,14 @@ final class BrewPlanModel : ObservableObject {
     @Published var waterMass : Double = 300.0 {
         didSet {
             if (waterOverCoffeeInt != ratioInt) {
-                coffeeMass = waterMass / ratio
+                
+                switch lockState {
+                case .ratio:
+                    coffeeMass = waterMass / ratio
+                default:
+                    ratio = waterMass / coffeeMass
+                }
+                
             }
         }
     }
@@ -29,7 +52,14 @@ final class BrewPlanModel : ObservableObject {
     @Published var ratio : Double = 15.0 {
         didSet {
             if (waterOverCoffeeInt != ratioInt) {
-                waterMass = coffeeMass * ratio
+                
+                switch lockState {
+                case .water:
+                    coffeeMass = waterMass / ratio
+                default:
+                    waterMass = coffeeMass * ratio
+                }
+                
             }
         }
     }

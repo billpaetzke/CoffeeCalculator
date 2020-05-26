@@ -1,8 +1,8 @@
 //
 //  CaffeineView.swift
-//  CoffeeCalculator WatchKit Extension
+//  CoffeeCalculatoriOS
 //
-//  Created by Bill Paetzke on 2/24/20.
+//  Created by Bill Paetzke on 4/2/20.
 //  Copyright © 2020 Bill Paetzke. All rights reserved.
 //
 
@@ -36,29 +36,55 @@ struct CaffeineView: View {
     
     var body: some View {
         
-        VStack {
-            if HKHealthStore.isHealthDataAvailable() {
-                // Add code to use HealthKit here.
-                
-                Text("\(formatZero(beverageMass))")
-                    .fontWeight(.bold)
-                    .font(.title)
-                    .focusable(true)
-                    .digitalCrownRotation($beverageMass, from: 120.0, through: 998.0, by: 1.0, sensitivity: .medium, isContinuous: false, isHapticFeedbackEnabled: true)
-                Text("g")
-                    .font(.subheadline)
-                Spacer()
-                Text("\(Int(caffeineMass * 1000))")
-                Text("mg")
-                    .font(.subheadline)
-                
+        
+        
+        NavigationView {
+            
+            
+            Form {
+                if HKHealthStore.isHealthDataAvailable() {
+                    // Add code to use HealthKit here.
+                    
+                    HStack {
+                    
+                        
+                        
+                    VStack {
+                        
+                        
+                        
+                        Stepper(value: $beverageMass, in: 120...355, step: 1) {
+                            Text("\(beverageMass, specifier: "%.0f") grams")
+                                .font(.title)
+                        }
+                        Slider(value: $beverageMass, in: 120...355)
+                        
+                        Text("\(Int(caffeineMass * 1000)) mg")
+                    }.padding()
+                    
+                    CoffeeCupView(beverageMass: $beverageMass, cupMassCapacity: 355.0)
+                        
+                    }
+                }
+                else {
+                    Text("Health app unavailable on your device.")
+                }
+            }
+            .navigationBarItems(
+                leading:
+                Button(action: {
+                    self.isPresented = false
+                }) {
+                    Image(systemName: "xmark.circle").imageScale(.large)
+                },
+                trailing:
                 Button(action: {
                     self.isLogging = true
                     
                     let healthStore = HKHealthStore()
                     
                     let allTypes = Set([HKObjectType.quantityType(forIdentifier: .dietaryCaffeine)!])
-
+                    
                     healthStore.requestAuthorization(toShare: allTypes, read: allTypes) { (success, error) in
                         if success {
                             healthStore.save(HKQuantitySample(type: HKObjectType.quantityType(forIdentifier: .dietaryCaffeine)!, quantity: HKQuantity(unit: .gram(), doubleValue: self.caffeineMass), start: Date(), end: Date()), withCompletion: { (success, error) in
@@ -81,16 +107,34 @@ struct CaffeineView: View {
                         }
                     }
                 }) {
-                    Image(systemName: isLogging ? "checkmark" : "square.and.pencil")
+                    Image(systemName: isLogging ? "checkmark" : "plus.circle.fill").imageScale(.large)
                 }.disabled(isLogging)
-                
-            }
-            else {
-                Text("Health app unavailable on your device.")
-            }
+            )
         }
         
     }
+}
+
+struct CoffeeCupView : View {
+    
+    @Binding var beverageMass : Double
+    var cupMassCapacity : Double
+    
+    var body: some View {
+        
+        RoundedRectangle(cornerRadius: 10)
+            .fill(Color.secondary)
+            .frame(width: 100, height: 150)
+            .overlay(RoundedRectangle(cornerRadius: 10)
+                .fill(Color.init(UIColor.brown))
+                .frame(width: 80, height: CGFloat(beverageMass / cupMassCapacity) * (150 - 10))
+                .offset(y: -5)
+            ,alignment: .bottom
+        )
+        
+    }
+    
+    
 }
 
 struct CaffeineView_Previews: PreviewProvider {

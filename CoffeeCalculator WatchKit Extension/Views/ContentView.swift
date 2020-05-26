@@ -7,47 +7,33 @@
 //
 
 import SwiftUI
-import Combine
 
 struct ContentView: View {
     
     var timerHolder : TimerHolder
-    var extendedSessionHolder : ExtendedSessionHolder
-    @State private var showCaffeineSheet = false
+    @ObservedObject var timerPlanModel : TimerPlanModel
     
     var body: some View {
         
-        VStack {
-            NavigationLink(destination:
-                CalculatorView(model: BrewPlanModel())
-            ) {
-                Text("Calculator")
-            }
-            
-            NavigationLink(destination:
-                TimerPlanView(timerHolder: timerHolder,
-                               extendedSessionHolder: extendedSessionHolder)
-            ) {
-                Text("Timer")
-            }
-            
-            Button(action: { self.showCaffeineSheet = true }) {
-                Text("Caffeine Logger")
-            }
-        }.sheet(isPresented: $showCaffeineSheet) {
-            CaffeineView(isPresented: self.$showCaffeineSheet)
-                .navigationBarTitle("X")
-        }
-        
+        TimerPlanView(
+            timerHolder: timerHolder,
+            plans: $timerPlanModel.plans,
+            selectedPlan: $timerPlanModel.selectedPlan,
+            areHapticsEnabled: $timerPlanModel.areHapticsEnabled,
+            speechVolume: $timerPlanModel.speechVolume
+        )
+        .environmentObject(timerPlanModel)
     }
 }
     
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            
-            ContentView(timerHolder: TimerHolder.sharedInstance,
-                        extendedSessionHolder: ExtendedSessionHolder())
-        }
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        
+        ContentView(
+            timerHolder: TimerHolder.sharedInstance,
+            timerPlanModel: TimerPlanModel(plans: [TimerPlan]())
+        )
+    }
 }
 
 

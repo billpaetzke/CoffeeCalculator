@@ -1,36 +1,25 @@
 //
 //  ExtendedSessionHolder.swift
-//  CoffeeCalculator WatchKit Extension
+//  CoffeeCalculatoriOS
 //
-//  Created by Bill Paetzke on 2/11/20.
+//  Created by Bill Paetzke on 4/23/20.
 //  Copyright © 2020 Bill Paetzke. All rights reserved.
 //
 
 import Foundation
-import WatchKit
+import UIKit
 
-final class ExtendedSessionHolder : NSObject, WKExtendedRuntimeSessionDelegate, ExtendedRuntimeSessionable  {
-    
-    private var runtimeSession = WKExtendedRuntimeSession()
-    
+final class ExtendedSessionHolder : ExtendedRuntimeSessionable  {
+        
     func start() {
-        if (runtimeSession.state == .invalid)
-        {
-            runtimeSession = WKExtendedRuntimeSession()
-        }
-        runtimeSession.delegate = self
-        runtimeSession.start()
+        UIApplication.shared.isIdleTimerDisabled = true
     }
     
     func stop() {
-        print("ES stopping")
-        if (runtimeSession.state == .running)
-        {
-            runtimeSession.invalidate()
-            print("ES stopped")
-        }
+        UIApplication.shared.isIdleTimerDisabled = false
     }
     
+    /*
     func extendedRuntimeSessionDidStart(_ extendedRuntimeSession: WKExtendedRuntimeSession) {
         // Track when your session starts.
     }
@@ -41,6 +30,7 @@ final class ExtendedSessionHolder : NSObject, WKExtendedRuntimeSessionDelegate, 
     func extendedRuntimeSession(_ extendedRuntimeSession: WKExtendedRuntimeSession, didInvalidateWith reason: WKExtendedRuntimeSessionInvalidationReason, error: Error?) {
         // Track when your session ends.
         // Also handle errors here.
-    }
+    }*/
     
 }
+

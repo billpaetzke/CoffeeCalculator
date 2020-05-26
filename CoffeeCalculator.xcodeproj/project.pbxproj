@@ -7,9 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8836272A240F071100E71759 /* CoffeeCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88362729240F071100E71759 /* CoffeeCalculatorTests.swift */; };
-		88362738240F09A900E71759 /* CoffeeCalculatorKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 88362736240F09A900E71759 /* CoffeeCalculatorKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8836273D240F0BDB00E71759 /* BrewRecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836273C240F0BDB00E71759 /* BrewRecipeModel.swift */; };
+		882E863D247D804C00038E59 /* CoffeeCalculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 882E863B247D804C00038E59 /* CoffeeCalculator.xcdatamodeld */; };
+		882E863E247D825F00038E59 /* CoffeeCalculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 882E863B247D804C00038E59 /* CoffeeCalculator.xcdatamodeld */; };
+		882E8640247D829100038E59 /* Plan+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882E863F247D829100038E59 /* Plan+Extensions.swift */; };
+		882E8642247D82AC00038E59 /* Stage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882E8641247D82AC00038E59 /* Stage+Extensions.swift */; };
+		882E8643247D82F400038E59 /* Plan+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882E863F247D829100038E59 /* Plan+Extensions.swift */; };
+		882E8644247D82F800038E59 /* Stage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882E8641247D82AC00038E59 /* Stage+Extensions.swift */; };
+		884191F424352E17002D95EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884191F324352E17002D95EE /* AppDelegate.swift */; };
+		884191F624352E17002D95EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884191F524352E17002D95EE /* SceneDelegate.swift */; };
+		884191F824352E17002D95EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884191F724352E17002D95EE /* ContentView.swift */; };
+		884191FA24352E1A002D95EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 884191F924352E1A002D95EE /* Assets.xcassets */; };
+		884191FD24352E1A002D95EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 884191FC24352E1A002D95EE /* Preview Assets.xcassets */; };
+		8841920024352E1A002D95EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 884191FE24352E1A002D95EE /* LaunchScreen.storyboard */; };
+		8841920B24352E1A002D95EE /* TimerPlanModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8841920A24352E1A002D95EE /* TimerPlanModelTests.swift */; };
+		884192222435302B002D95EE /* BrewPlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884631532409D3BC00C3CEC9 /* BrewPlanModel.swift */; };
+		884192232435342B002D95EE /* TimerHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884630B123F7481000C3CEC9 /* TimerHolder.swift */; };
+		8841922624354ED9002D95EE /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8841922524354ED9002D95EE /* CalculatorView.swift */; };
+		88419228243651EA002D95EE /* TimerSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88419227243651EA002D95EE /* TimerSubscriber.swift */; };
+		88419229243651EA002D95EE /* TimerSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88419227243651EA002D95EE /* TimerSubscriber.swift */; };
+		8841922B243652E1002D95EE /* TimerPlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8841922A243652E1002D95EE /* TimerPlanModel.swift */; };
+		8841922C243652E1002D95EE /* TimerPlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8841922A243652E1002D95EE /* TimerPlanModel.swift */; };
+		8841922F243658C9002D95EE /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8841922E243658C9002D95EE /* TimerView.swift */; };
+		8841923124365969002D95EE /* TimerPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8841923024365969002D95EE /* TimerPlanView.swift */; };
+		8841923424366342002D95EE /* CaffeineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8841923324366342002D95EE /* CaffeineView.swift */; };
+		8841923724366569002D95EE /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8841923624366569002D95EE /* HealthKit.framework */; };
+		884192392436A6F8002D95EE /* HapticHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884192382436A6F8002D95EE /* HapticHolder.swift */; };
 		884630B023F747F000C3CEC9 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884630AF23F747F000C3CEC9 /* CalculatorViewModel.swift */; };
 		884630B223F7481000C3CEC9 /* TimerHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884630B123F7481000C3CEC9 /* TimerHolder.swift */; };
 		884630B423F7482F00C3CEC9 /* ExtendedSessionHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884630B323F7482F00C3CEC9 /* ExtendedSessionHolder.swift */; };
@@ -17,6 +39,30 @@
 		884631092404793C00C3CEC9 /* CaffeineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884631082404793C00C3CEC9 /* CaffeineView.swift */; };
 		884631502409D28200C3CEC9 /* TimerPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8846314F2409D28200C3CEC9 /* TimerPlanView.swift */; };
 		884631542409D3BC00C3CEC9 /* BrewPlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884631532409D3BC00C3CEC9 /* BrewPlanModel.swift */; };
+		88A045BC245CC30500993345 /* TimerPlanListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A045BB245CC30500993345 /* TimerPlanListView.swift */; };
+		88A045BE2460907100993345 /* TimerPlanAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A045BD2460907100993345 /* TimerPlanAddView.swift */; };
+		88A045C02460A9B300993345 /* TimerStageEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A045BF2460A9B300993345 /* TimerStageEditView.swift */; };
+		88A04640246302FA00993345 /* TimerPlanListView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A0463F246302FA00993345 /* TimerPlanListView1.swift */; };
+		88A046422463035400993345 /* TimerPlanView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A046412463035400993345 /* TimerPlanView2.swift */; };
+		88A046442463036700993345 /* TimerStageEditView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A046432463036700993345 /* TimerStageEditView3.swift */; };
+		88A046462463089400993345 /* TimerStageEditView3Wrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A046452463089400993345 /* TimerStageEditView3Wrap.swift */; };
+		88A046482463118B00993345 /* TimerPlanRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A046472463118B00993345 /* TimerPlanRowView.swift */; };
+		88A0464A24631DB800993345 /* TimerPlanAddView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A0464924631DB800993345 /* TimerPlanAddView1.swift */; };
+		88A0464C246320AA00993345 /* View+SheetBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A0464B246320AA00993345 /* View+SheetBarItems.swift */; };
+		88A0465624646B8B00993345 /* TimerPlanView2Wrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A0465524646B8B00993345 /* TimerPlanView2Wrap.swift */; };
+		88AD93EC2444E33700D5B4F7 /* SheetViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD93EB2444E33700D5B4F7 /* SheetViewExtension.swift */; };
+		88AD93EE24455CFD00D5B4F7 /* ComplicationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD93ED24455CFD00D5B4F7 /* ComplicationHandler.swift */; };
+		88AD93F02446814600D5B4F7 /* HapticsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD93EF2446814600D5B4F7 /* HapticsHandler.swift */; };
+		88AD93F6244BBC4D00D5B4F7 /* TimerStageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD93F5244BBC4D00D5B4F7 /* TimerStageListView.swift */; };
+		88AD93F8244D15C700D5B4F7 /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD93F7244D15C700D5B4F7 /* TimelineView.swift */; };
+		88AD93FA2450D60400D5B4F7 /* TimerHolderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD93F92450D60400D5B4F7 /* TimerHolderTests.swift */; };
+		88AD93FE245137AC00D5B4F7 /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD93F7244D15C700D5B4F7 /* TimelineView.swift */; };
+		88AD9401245201B300D5B4F7 /* ExtendedRuntimeSessionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD9400245201B300D5B4F7 /* ExtendedRuntimeSessionable.swift */; };
+		88AD9402245201B300D5B4F7 /* ExtendedRuntimeSessionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD9400245201B300D5B4F7 /* ExtendedRuntimeSessionable.swift */; };
+		88AD9404245202E700D5B4F7 /* ExtendedRuntimeSessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD9403245202E700D5B4F7 /* ExtendedRuntimeSessionHandler.swift */; };
+		88AD9405245202E700D5B4F7 /* ExtendedRuntimeSessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD9403245202E700D5B4F7 /* ExtendedRuntimeSessionHandler.swift */; };
+		88AD940D2452105100D5B4F7 /* ExtendedSessionHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD940C2452105100D5B4F7 /* ExtendedSessionHolder.swift */; };
+		88AD941224523CDA00D5B4F7 /* TimerStageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD941124523CDA00D5B4F7 /* TimerStageListView.swift */; };
 		88B4223D23CF8EE80008707F /* CoffeeCalculator WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 88B4223C23CF8EE80008707F /* CoffeeCalculator WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		88B4224323CF8EE80008707F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B4224123CF8EE80008707F /* Interface.storyboard */; };
 		88B4224523CF8EE90008707F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88B4224423CF8EE90008707F /* Assets.xcassets */; };
@@ -31,9 +77,17 @@
 		88B4226023CF8EE90008707F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88B4225F23CF8EE90008707F /* Preview Assets.xcassets */; };
 		88B4227123D788630008707F /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B4227023D788630008707F /* TimerView.swift */; };
 		88B4227723DA21CF0008707F /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B4227623DA21CF0008707F /* CalculatorView.swift */; };
+		88DC7135245A1EE600959CD8 /* HapticsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DC7134245A1EE600959CD8 /* HapticsHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8841920724352E1A002D95EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88B4223223CF8EE70008707F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 884191F024352E17002D95EE;
+			remoteInfo = CoffeeCalculatoriOS;
+		};
 		88B4223E23CF8EE80008707F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 88B4223223CF8EE70008707F /* Project object */;
@@ -76,13 +130,29 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		88362727240F071100E71759 /* CoffeeCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		88362729240F071100E71759 /* CoffeeCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCalculatorTests.swift; sourceTree = "<group>"; };
-		8836272B240F071100E71759 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		88362734240F09A900E71759 /* CoffeeCalculatorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoffeeCalculatorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		88362736240F09A900E71759 /* CoffeeCalculatorKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoffeeCalculatorKit.h; sourceTree = "<group>"; };
-		88362737240F09A900E71759 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8836273C240F0BDB00E71759 /* BrewRecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewRecipeModel.swift; sourceTree = "<group>"; };
+		882E863C247D804C00038E59 /* CoffeeCalculator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoffeeCalculator.xcdatamodel; sourceTree = "<group>"; };
+		882E863F247D829100038E59 /* Plan+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Plan+Extensions.swift"; sourceTree = "<group>"; };
+		882E8641247D82AC00038E59 /* Stage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stage+Extensions.swift"; sourceTree = "<group>"; };
+		884191F124352E17002D95EE /* CoffeeCalculatoriOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeCalculatoriOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		884191F324352E17002D95EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		884191F524352E17002D95EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		884191F724352E17002D95EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		884191F924352E1A002D95EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		884191FC24352E1A002D95EE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		884191FF24352E1A002D95EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8841920124352E1A002D95EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8841920624352E1A002D95EE /* CoffeeCalculatoriOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeCalculatoriOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8841920A24352E1A002D95EE /* TimerPlanModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPlanModelTests.swift; sourceTree = "<group>"; };
+		8841920C24352E1A002D95EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8841922524354ED9002D95EE /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
+		88419227243651EA002D95EE /* TimerSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSubscriber.swift; sourceTree = "<group>"; };
+		8841922A243652E1002D95EE /* TimerPlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPlanModel.swift; sourceTree = "<group>"; };
+		8841922E243658C9002D95EE /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		8841923024365969002D95EE /* TimerPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPlanView.swift; sourceTree = "<group>"; };
+		8841923324366342002D95EE /* CaffeineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaffeineView.swift; sourceTree = "<group>"; };
+		8841923524366569002D95EE /* CoffeeCalculatoriOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoffeeCalculatoriOS.entitlements; sourceTree = "<group>"; };
+		8841923624366569002D95EE /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		884192382436A6F8002D95EE /* HapticHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticHolder.swift; sourceTree = "<group>"; };
 		884630AF23F747F000C3CEC9 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
 		884630B123F7481000C3CEC9 /* TimerHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerHolder.swift; sourceTree = "<group>"; };
 		884630B323F7482F00C3CEC9 /* ExtendedSessionHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedSessionHolder.swift; sourceTree = "<group>"; };
@@ -91,6 +161,27 @@
 		884631082404793C00C3CEC9 /* CaffeineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaffeineView.swift; sourceTree = "<group>"; };
 		8846314F2409D28200C3CEC9 /* TimerPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPlanView.swift; sourceTree = "<group>"; };
 		884631532409D3BC00C3CEC9 /* BrewPlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewPlanModel.swift; sourceTree = "<group>"; };
+		88A045BB245CC30500993345 /* TimerPlanListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPlanListView.swift; sourceTree = "<group>"; };
+		88A045BD2460907100993345 /* TimerPlanAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPlanAddView.swift; sourceTree = "<group>"; };
+		88A045BF2460A9B300993345 /* TimerStageEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStageEditView.swift; sourceTree = "<group>"; };
+		88A0463F246302FA00993345 /* TimerPlanListView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPlanListView1.swift; sourceTree = "<group>"; };
+		88A046412463035400993345 /* TimerPlanView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPlanView2.swift; sourceTree = "<group>"; };
+		88A046432463036700993345 /* TimerStageEditView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStageEditView3.swift; sourceTree = "<group>"; };
+		88A046452463089400993345 /* TimerStageEditView3Wrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStageEditView3Wrap.swift; sourceTree = "<group>"; };
+		88A046472463118B00993345 /* TimerPlanRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPlanRowView.swift; sourceTree = "<group>"; };
+		88A0464924631DB800993345 /* TimerPlanAddView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPlanAddView1.swift; sourceTree = "<group>"; };
+		88A0464B246320AA00993345 /* View+SheetBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+SheetBarItems.swift"; sourceTree = "<group>"; };
+		88A0465524646B8B00993345 /* TimerPlanView2Wrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPlanView2Wrap.swift; sourceTree = "<group>"; };
+		88AD93EB2444E33700D5B4F7 /* SheetViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewExtension.swift; sourceTree = "<group>"; };
+		88AD93ED24455CFD00D5B4F7 /* ComplicationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationHandler.swift; sourceTree = "<group>"; };
+		88AD93EF2446814600D5B4F7 /* HapticsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsHandler.swift; sourceTree = "<group>"; };
+		88AD93F5244BBC4D00D5B4F7 /* TimerStageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStageListView.swift; sourceTree = "<group>"; };
+		88AD93F7244D15C700D5B4F7 /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
+		88AD93F92450D60400D5B4F7 /* TimerHolderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerHolderTests.swift; sourceTree = "<group>"; };
+		88AD9400245201B300D5B4F7 /* ExtendedRuntimeSessionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedRuntimeSessionable.swift; sourceTree = "<group>"; };
+		88AD9403245202E700D5B4F7 /* ExtendedRuntimeSessionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedRuntimeSessionHandler.swift; sourceTree = "<group>"; };
+		88AD940C2452105100D5B4F7 /* ExtendedSessionHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedSessionHolder.swift; sourceTree = "<group>"; };
+		88AD941124523CDA00D5B4F7 /* TimerStageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStageListView.swift; sourceTree = "<group>"; };
 		88B4223823CF8EE80008707F /* CoffeeCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B4223C23CF8EE80008707F /* CoffeeCalculator WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoffeeCalculator WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B4224223CF8EE80008707F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -109,17 +200,19 @@
 		88B4226223CF8EE90008707F /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		88B4227023D788630008707F /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		88B4227623DA21CF0008707F /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
+		88DC7134245A1EE600959CD8 /* HapticsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		88362724240F071100E71759 /* Frameworks */ = {
+		884191EE24352E17002D95EE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8841923724366569002D95EE /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		88362731240F09A900E71759 /* Frameworks */ = {
+		8841920324352E1A002D95EE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -137,40 +230,164 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		88362728240F071100E71759 /* CoffeeCalculatorTests */ = {
+		884191F224352E17002D95EE /* CoffeeCalculatoriOS */ = {
 			isa = PBXGroup;
 			children = (
-				88362729240F071100E71759 /* CoffeeCalculatorTests.swift */,
-				8836272B240F071100E71759 /* Info.plist */,
+				884191F324352E17002D95EE /* AppDelegate.swift */,
+				884191F524352E17002D95EE /* SceneDelegate.swift */,
+				88AD940C2452105100D5B4F7 /* ExtendedSessionHolder.swift */,
+				884192382436A6F8002D95EE /* HapticHolder.swift */,
+				88DC7133245A1EC500959CD8 /* Subscribers */,
+				88AD940E2452112E00D5B4F7 /* Views */,
+				88A0464D2463245800993345 /* Extensions */,
+				8841923524366569002D95EE /* CoffeeCalculatoriOS.entitlements */,
+				884191F924352E1A002D95EE /* Assets.xcassets */,
+				884191FE24352E1A002D95EE /* LaunchScreen.storyboard */,
+				8841920124352E1A002D95EE /* Info.plist */,
+				884191FB24352E1A002D95EE /* Preview Content */,
 			);
-			path = CoffeeCalculatorTests;
+			path = CoffeeCalculatoriOS;
 			sourceTree = "<group>";
 		};
-		88362735240F09A900E71759 /* CoffeeCalculatorKit */ = {
+		884191FB24352E1A002D95EE /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				88362736240F09A900E71759 /* CoffeeCalculatorKit.h */,
-				88362737240F09A900E71759 /* Info.plist */,
-				8836273C240F0BDB00E71759 /* BrewRecipeModel.swift */,
+				884191FC24352E1A002D95EE /* Preview Assets.xcassets */,
 			);
-			path = CoffeeCalculatorKit;
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8841920924352E1A002D95EE /* CoffeeCalculatoriOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				8841920A24352E1A002D95EE /* TimerPlanModelTests.swift */,
+				88AD93F92450D60400D5B4F7 /* TimerHolderTests.swift */,
+				8841920C24352E1A002D95EE /* Info.plist */,
+			);
+			path = CoffeeCalculatoriOSTests;
+			sourceTree = "<group>";
+		};
+		8841922D24365792002D95EE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8841922A243652E1002D95EE /* TimerPlanModel.swift */,
+				884631532409D3BC00C3CEC9 /* BrewPlanModel.swift */,
+				882E863B247D804C00038E59 /* CoffeeCalculator.xcdatamodeld */,
+				882E863F247D829100038E59 /* Plan+Extensions.swift */,
+				882E8641247D82AC00038E59 /* Stage+Extensions.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		884631052404773400C3CEC9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8841923624366569002D95EE /* HealthKit.framework */,
 				884631062404773400C3CEC9 /* HealthKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		88A0464D2463245800993345 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				88A0464B246320AA00993345 /* View+SheetBarItems.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		88AD93FD2451378900D5B4F7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				88AD93F7244D15C700D5B4F7 /* TimelineView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		88AD93FF2452019400D5B4F7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				88AD9400245201B300D5B4F7 /* ExtendedRuntimeSessionable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		88AD94092452071B00D5B4F7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				88AD93EB2444E33700D5B4F7 /* SheetViewExtension.swift */,
+				88B4225823CF8EE90008707F /* NotificationView.swift */,
+				88B4225023CF8EE90008707F /* ContentView.swift */,
+				88B4227623DA21CF0008707F /* CalculatorView.swift */,
+				8846314F2409D28200C3CEC9 /* TimerPlanView.swift */,
+				88AD93F5244BBC4D00D5B4F7 /* TimerStageListView.swift */,
+				88B4227023D788630008707F /* TimerView.swift */,
+				884631082404793C00C3CEC9 /* CaffeineView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		88AD940A245209D200D5B4F7 /* Subscribers */ = {
+			isa = PBXGroup;
+			children = (
+				88AD93ED24455CFD00D5B4F7 /* ComplicationHandler.swift */,
+				88AD93EF2446814600D5B4F7 /* HapticsHandler.swift */,
+			);
+			path = Subscribers;
+			sourceTree = "<group>";
+		};
+		88AD940E2452112E00D5B4F7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				884191F724352E17002D95EE /* ContentView.swift */,
+				88A045BB245CC30500993345 /* TimerPlanListView.swift */,
+				88A0463F246302FA00993345 /* TimerPlanListView1.swift */,
+				88A046472463118B00993345 /* TimerPlanRowView.swift */,
+				88A045BD2460907100993345 /* TimerPlanAddView.swift */,
+				88A0464924631DB800993345 /* TimerPlanAddView1.swift */,
+				8841923024365969002D95EE /* TimerPlanView.swift */,
+				88A0465524646B8B00993345 /* TimerPlanView2Wrap.swift */,
+				88A046412463035400993345 /* TimerPlanView2.swift */,
+				88AD941124523CDA00D5B4F7 /* TimerStageListView.swift */,
+				88A045BF2460A9B300993345 /* TimerStageEditView.swift */,
+				88A046452463089400993345 /* TimerStageEditView3Wrap.swift */,
+				88A046432463036700993345 /* TimerStageEditView3.swift */,
+				8841922E243658C9002D95EE /* TimerView.swift */,
+				8841923324366342002D95EE /* CaffeineView.swift */,
+				8841922524354ED9002D95EE /* CalculatorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		88AD940F2452160A00D5B4F7 /* Subscribers */ = {
+			isa = PBXGroup;
+			children = (
+				88419227243651EA002D95EE /* TimerSubscriber.swift */,
+				88AD9403245202E700D5B4F7 /* ExtendedRuntimeSessionHandler.swift */,
+			);
+			path = Subscribers;
+			sourceTree = "<group>";
+		};
+		88AD9410245216CD00D5B4F7 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				884630B123F7481000C3CEC9 /* TimerHolder.swift */,
+				88AD93FD2451378900D5B4F7 /* Views */,
+				8841922D24365792002D95EE /* Models */,
+				88AD93FF2452019400D5B4F7 /* Protocols */,
+				88AD940F2452160A00D5B4F7 /* Subscribers */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		88B4223123CF8EE70008707F = {
 			isa = PBXGroup;
 			children = (
+				88AD9410245216CD00D5B4F7 /* Shared */,
 				88B4224023CF8EE80008707F /* CoffeeCalculator WatchKit App */,
 				88B4224F23CF8EE90008707F /* CoffeeCalculator WatchKit Extension */,
-				88362728240F071100E71759 /* CoffeeCalculatorTests */,
-				88362735240F09A900E71759 /* CoffeeCalculatorKit */,
+				884191F224352E17002D95EE /* CoffeeCalculatoriOS */,
+				8841920924352E1A002D95EE /* CoffeeCalculatoriOSTests */,
 				88B4223923CF8EE80008707F /* Products */,
 				884631052404773400C3CEC9 /* Frameworks */,
 			);
@@ -182,8 +399,8 @@
 				88B4223823CF8EE80008707F /* CoffeeCalculator.app */,
 				88B4223C23CF8EE80008707F /* CoffeeCalculator WatchKit App.app */,
 				88B4224B23CF8EE90008707F /* CoffeeCalculator WatchKit Extension.appex */,
-				88362727240F071100E71759 /* CoffeeCalculatorTests.xctest */,
-				88362734240F09A900E71759 /* CoffeeCalculatorKit.framework */,
+				884191F124352E17002D95EE /* CoffeeCalculatoriOS.app */,
+				8841920624352E1A002D95EE /* CoffeeCalculatoriOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -202,24 +419,18 @@
 			isa = PBXGroup;
 			children = (
 				884631042404773400C3CEC9 /* CoffeeCalculator WatchKit Extension.entitlements */,
-				88B4225023CF8EE90008707F /* ContentView.swift */,
+				88AD94092452071B00D5B4F7 /* Views */,
+				88AD940A245209D200D5B4F7 /* Subscribers */,
+				884630AF23F747F000C3CEC9 /* CalculatorViewModel.swift */,
 				88B4225223CF8EE90008707F /* HostingController.swift */,
 				88B4225423CF8EE90008707F /* ExtensionDelegate.swift */,
 				88B4225623CF8EE90008707F /* NotificationController.swift */,
-				88B4225823CF8EE90008707F /* NotificationView.swift */,
 				88B4225A23CF8EE90008707F /* ComplicationController.swift */,
+				884630B323F7482F00C3CEC9 /* ExtendedSessionHolder.swift */,
 				88B4225C23CF8EE90008707F /* Assets.xcassets */,
 				88B4226123CF8EE90008707F /* Info.plist */,
 				88B4226223CF8EE90008707F /* PushNotificationPayload.apns */,
 				88B4225E23CF8EE90008707F /* Preview Content */,
-				88B4227623DA21CF0008707F /* CalculatorView.swift */,
-				884630AF23F747F000C3CEC9 /* CalculatorViewModel.swift */,
-				884631532409D3BC00C3CEC9 /* BrewPlanModel.swift */,
-				8846314F2409D28200C3CEC9 /* TimerPlanView.swift */,
-				88B4227023D788630008707F /* TimerView.swift */,
-				884630B123F7481000C3CEC9 /* TimerHolder.swift */,
-				884630B323F7482F00C3CEC9 /* ExtendedSessionHolder.swift */,
-				884631082404793C00C3CEC9 /* CaffeineView.swift */,
 			);
 			path = "CoffeeCalculator WatchKit Extension";
 			sourceTree = "<group>";
@@ -232,54 +443,51 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		88DC7133245A1EC500959CD8 /* Subscribers */ = {
+			isa = PBXGroup;
+			children = (
+				88DC7134245A1EE600959CD8 /* HapticsHandler.swift */,
+			);
+			path = Subscribers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		8836272F240F09A900E71759 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				88362738240F09A900E71759 /* CoffeeCalculatorKit.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		88362726240F071100E71759 /* CoffeeCalculatorTests */ = {
+		884191F024352E17002D95EE /* CoffeeCalculatoriOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8836272E240F071100E71759 /* Build configuration list for PBXNativeTarget "CoffeeCalculatorTests" */;
+			buildConfigurationList = 8841921E24352E1A002D95EE /* Build configuration list for PBXNativeTarget "CoffeeCalculatoriOS" */;
 			buildPhases = (
-				88362723240F071100E71759 /* Sources */,
-				88362724240F071100E71759 /* Frameworks */,
-				88362725240F071100E71759 /* Resources */,
+				884191ED24352E17002D95EE /* Sources */,
+				884191EE24352E17002D95EE /* Frameworks */,
+				884191EF24352E17002D95EE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CoffeeCalculatorTests;
-			productName = CoffeeCalculatorTests;
-			productReference = 88362727240F071100E71759 /* CoffeeCalculatorTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			name = CoffeeCalculatoriOS;
+			productName = CoffeeCalculatoriOS;
+			productReference = 884191F124352E17002D95EE /* CoffeeCalculatoriOS.app */;
+			productType = "com.apple.product-type.application";
 		};
-		88362733240F09A900E71759 /* CoffeeCalculatorKit */ = {
+		8841920524352E1A002D95EE /* CoffeeCalculatoriOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 88362739240F09A900E71759 /* Build configuration list for PBXNativeTarget "CoffeeCalculatorKit" */;
+			buildConfigurationList = 8841921F24352E1A002D95EE /* Build configuration list for PBXNativeTarget "CoffeeCalculatoriOSTests" */;
 			buildPhases = (
-				8836272F240F09A900E71759 /* Headers */,
-				88362730240F09A900E71759 /* Sources */,
-				88362731240F09A900E71759 /* Frameworks */,
-				88362732240F09A900E71759 /* Resources */,
+				8841920224352E1A002D95EE /* Sources */,
+				8841920324352E1A002D95EE /* Frameworks */,
+				8841920424352E1A002D95EE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8841920824352E1A002D95EE /* PBXTargetDependency */,
 			);
-			name = CoffeeCalculatorKit;
-			productName = CoffeeCalculatorKit;
-			productReference = 88362734240F09A900E71759 /* CoffeeCalculatorKit.framework */;
-			productType = "com.apple.product-type.framework";
+			name = CoffeeCalculatoriOSTests;
+			productName = CoffeeCalculatoriOSTests;
+			productReference = 8841920624352E1A002D95EE /* CoffeeCalculatoriOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		88B4223723CF8EE80008707F /* CoffeeCalculator */ = {
 			isa = PBXNativeTarget;
@@ -338,16 +546,16 @@
 		88B4223223CF8EE70008707F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Bill Paetzke";
 				TargetAttributes = {
-					88362726240F071100E71759 = {
-						CreatedOnToolsVersion = 11.3.1;
+					884191F024352E17002D95EE = {
+						CreatedOnToolsVersion = 11.4;
 					};
-					88362733240F09A900E71759 = {
-						CreatedOnToolsVersion = 11.3.1;
-						LastSwiftMigration = 1130;
+					8841920524352E1A002D95EE = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = 884191F024352E17002D95EE;
 					};
 					88B4223723CF8EE80008707F = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -376,21 +584,24 @@
 				88B4223723CF8EE80008707F /* CoffeeCalculator */,
 				88B4223B23CF8EE80008707F /* CoffeeCalculator WatchKit App */,
 				88B4224A23CF8EE90008707F /* CoffeeCalculator WatchKit Extension */,
-				88362726240F071100E71759 /* CoffeeCalculatorTests */,
-				88362733240F09A900E71759 /* CoffeeCalculatorKit */,
+				884191F024352E17002D95EE /* CoffeeCalculatoriOS */,
+				8841920524352E1A002D95EE /* CoffeeCalculatoriOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		88362725240F071100E71759 /* Resources */ = {
+		884191EF24352E17002D95EE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8841920024352E1A002D95EE /* LaunchScreen.storyboard in Resources */,
+				884191FD24352E1A002D95EE /* Preview Assets.xcassets in Resources */,
+				884191FA24352E1A002D95EE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		88362732240F09A900E71759 /* Resources */ = {
+		8841920424352E1A002D95EE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -425,19 +636,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		88362723240F071100E71759 /* Sources */ = {
+		884191ED24352E17002D95EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8836272A240F071100E71759 /* CoffeeCalculatorTests.swift in Sources */,
+				882E8644247D82F800038E59 /* Stage+Extensions.swift in Sources */,
+				8841922F243658C9002D95EE /* TimerView.swift in Sources */,
+				884192222435302B002D95EE /* BrewPlanModel.swift in Sources */,
+				88A046482463118B00993345 /* TimerPlanRowView.swift in Sources */,
+				884191F424352E17002D95EE /* AppDelegate.swift in Sources */,
+				88A046422463035400993345 /* TimerPlanView2.swift in Sources */,
+				882E863D247D804C00038E59 /* CoffeeCalculator.xcdatamodeld in Sources */,
+				8841923124365969002D95EE /* TimerPlanView.swift in Sources */,
+				88419229243651EA002D95EE /* TimerSubscriber.swift in Sources */,
+				884191F624352E17002D95EE /* SceneDelegate.swift in Sources */,
+				8841923424366342002D95EE /* CaffeineView.swift in Sources */,
+				88A046462463089400993345 /* TimerStageEditView3Wrap.swift in Sources */,
+				8841922C243652E1002D95EE /* TimerPlanModel.swift in Sources */,
+				884192392436A6F8002D95EE /* HapticHolder.swift in Sources */,
+				88A0464C246320AA00993345 /* View+SheetBarItems.swift in Sources */,
+				88AD941224523CDA00D5B4F7 /* TimerStageListView.swift in Sources */,
+				88A04640246302FA00993345 /* TimerPlanListView1.swift in Sources */,
+				88AD940D2452105100D5B4F7 /* ExtendedSessionHolder.swift in Sources */,
+				88A0464A24631DB800993345 /* TimerPlanAddView1.swift in Sources */,
+				88A046442463036700993345 /* TimerStageEditView3.swift in Sources */,
+				88A045C02460A9B300993345 /* TimerStageEditView.swift in Sources */,
+				88A045BC245CC30500993345 /* TimerPlanListView.swift in Sources */,
+				88AD9402245201B300D5B4F7 /* ExtendedRuntimeSessionable.swift in Sources */,
+				88A045BE2460907100993345 /* TimerPlanAddView.swift in Sources */,
+				884192232435342B002D95EE /* TimerHolder.swift in Sources */,
+				8841922624354ED9002D95EE /* CalculatorView.swift in Sources */,
+				882E8643247D82F400038E59 /* Plan+Extensions.swift in Sources */,
+				884191F824352E17002D95EE /* ContentView.swift in Sources */,
+				88AD93FE245137AC00D5B4F7 /* TimelineView.swift in Sources */,
+				88AD9405245202E700D5B4F7 /* ExtendedRuntimeSessionHandler.swift in Sources */,
+				88A0465624646B8B00993345 /* TimerPlanView2Wrap.swift in Sources */,
+				88DC7135245A1EE600959CD8 /* HapticsHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		88362730240F09A900E71759 /* Sources */ = {
+		8841920224352E1A002D95EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8836273D240F0BDB00E71759 /* BrewRecipeModel.swift in Sources */,
+				8841920B24352E1A002D95EE /* TimerPlanModelTests.swift in Sources */,
+				88AD93FA2450D60400D5B4F7 /* TimerHolderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,26 +688,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88AD93EE24455CFD00D5B4F7 /* ComplicationHandler.swift in Sources */,
 				88B4227123D788630008707F /* TimerView.swift in Sources */,
 				884630B223F7481000C3CEC9 /* TimerHolder.swift in Sources */,
+				882E8640247D829100038E59 /* Plan+Extensions.swift in Sources */,
 				88B4225323CF8EE90008707F /* HostingController.swift in Sources */,
 				88B4225123CF8EE90008707F /* ContentView.swift in Sources */,
+				88AD93F8244D15C700D5B4F7 /* TimelineView.swift in Sources */,
 				884630B423F7482F00C3CEC9 /* ExtendedSessionHolder.swift in Sources */,
 				884630B023F747F000C3CEC9 /* CalculatorViewModel.swift in Sources */,
 				88B4225723CF8EE90008707F /* NotificationController.swift in Sources */,
+				88AD9401245201B300D5B4F7 /* ExtendedRuntimeSessionable.swift in Sources */,
 				88B4225523CF8EE90008707F /* ExtensionDelegate.swift in Sources */,
+				882E8642247D82AC00038E59 /* Stage+Extensions.swift in Sources */,
+				88AD93EC2444E33700D5B4F7 /* SheetViewExtension.swift in Sources */,
+				88AD93F6244BBC4D00D5B4F7 /* TimerStageListView.swift in Sources */,
 				884631092404793C00C3CEC9 /* CaffeineView.swift in Sources */,
 				88B4227723DA21CF0008707F /* CalculatorView.swift in Sources */,
+				88419228243651EA002D95EE /* TimerSubscriber.swift in Sources */,
+				88AD93F02446814600D5B4F7 /* HapticsHandler.swift in Sources */,
 				88B4225923CF8EE90008707F /* NotificationView.swift in Sources */,
+				8841922B243652E1002D95EE /* TimerPlanModel.swift in Sources */,
 				884631542409D3BC00C3CEC9 /* BrewPlanModel.swift in Sources */,
+				88AD9404245202E700D5B4F7 /* ExtendedRuntimeSessionHandler.swift in Sources */,
 				884631502409D28200C3CEC9 /* TimerPlanView.swift in Sources */,
 				88B4225B23CF8EE90008707F /* ComplicationController.swift in Sources */,
+				882E863E247D825F00038E59 /* CoffeeCalculator.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8841920824352E1A002D95EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 884191F024352E17002D95EE /* CoffeeCalculatoriOS */;
+			targetProxy = 8841920724352E1A002D95EE /* PBXContainerItemProxy */;
+		};
 		88B4223F23CF8EE80008707F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 88B4223B23CF8EE80008707F /* CoffeeCalculator WatchKit App */;
@@ -478,6 +738,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		884191FE24352E1A002D95EE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				884191FF24352E1A002D95EE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		88B4224123CF8EE80008707F /* Interface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -489,100 +757,91 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		8836272C240F071100E71759 /* Debug */ = {
+		8841921824352E1A002D95EE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CoffeeCalculatoriOS/CoffeeCalculatoriOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CoffeeCalculatorTests/Info.plist;
+				DEVELOPMENT_ASSET_PATHS = "\"CoffeeCalculatoriOS/Preview Content\"";
+				DEVELOPMENT_TEAM = LSVA86Q34D;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = CoffeeCalculatoriOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = BillPaetzke.CoffeeCalculatorTests;
+				PRODUCT_BUNDLE_IDENTIFIER = BillPaetzke.CoffeeCalculatoriOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		8836272D240F071100E71759 /* Release */ = {
+		8841921924352E1A002D95EE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CoffeeCalculatoriOS/CoffeeCalculatoriOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CoffeeCalculatorTests/Info.plist;
+				DEVELOPMENT_ASSET_PATHS = "\"CoffeeCalculatoriOS/Preview Content\"";
+				DEVELOPMENT_TEAM = LSVA86Q34D;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = CoffeeCalculatoriOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = BillPaetzke.CoffeeCalculatorTests;
+				PRODUCT_BUNDLE_IDENTIFIER = BillPaetzke.CoffeeCalculatoriOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		8836273A240F09A900E71759 /* Debug */ = {
+		8841921A24352E1A002D95EE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CLANG_ENABLE_MODULES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CoffeeCalculatorKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				DEVELOPMENT_TEAM = LSVA86Q34D;
+				INFOPLIST_FILE = CoffeeCalculatoriOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = BillPaetzke.CoffeeCalculatorKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				PRODUCT_BUNDLE_IDENTIFIER = BillPaetzke.CoffeeCalculatoriOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoffeeCalculatoriOS.app/CoffeeCalculatoriOS";
 			};
 			name = Debug;
 		};
-		8836273B240F09A900E71759 /* Release */ = {
+		8841921B24352E1A002D95EE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CLANG_ENABLE_MODULES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CoffeeCalculatorKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				DEVELOPMENT_TEAM = LSVA86Q34D;
+				INFOPLIST_FILE = CoffeeCalculatoriOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = BillPaetzke.CoffeeCalculatorKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = BillPaetzke.CoffeeCalculatoriOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoffeeCalculatoriOS.app/CoffeeCalculatoriOS";
 			};
 			name = Release;
 		};
@@ -815,20 +1074,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8836272E240F071100E71759 /* Build configuration list for PBXNativeTarget "CoffeeCalculatorTests" */ = {
+		8841921E24352E1A002D95EE /* Build configuration list for PBXNativeTarget "CoffeeCalculatoriOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8836272C240F071100E71759 /* Debug */,
-				8836272D240F071100E71759 /* Release */,
+				8841921824352E1A002D95EE /* Debug */,
+				8841921924352E1A002D95EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		88362739240F09A900E71759 /* Build configuration list for PBXNativeTarget "CoffeeCalculatorKit" */ = {
+		8841921F24352E1A002D95EE /* Build configuration list for PBXNativeTarget "CoffeeCalculatoriOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8836273A240F09A900E71759 /* Debug */,
-				8836273B240F09A900E71759 /* Release */,
+				8841921A24352E1A002D95EE /* Debug */,
+				8841921B24352E1A002D95EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -870,6 +1129,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		882E863B247D804C00038E59 /* CoffeeCalculator.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				882E863C247D804C00038E59 /* CoffeeCalculator.xcdatamodel */,
+			);
+			currentVersion = 882E863C247D804C00038E59 /* CoffeeCalculator.xcdatamodel */;
+			path = CoffeeCalculator.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 88B4223223CF8EE70008707F /* Project object */;
 }
